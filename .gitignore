@@ -1,1 +1,9 @@
 node_modules
+.idea/misc.xml
+.idea/modules.xml
+.idea/sonar-web-frontend-reporters.iml
+.idea/sonarIssues.xml
+.idea/vcs.xml
+.idea/workspace.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
