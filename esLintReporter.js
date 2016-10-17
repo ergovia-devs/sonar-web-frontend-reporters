@@ -65,8 +65,9 @@ ESLintReporter.prototype.reporter = function(results) {
                         fileNbViolations[global.selfESR.INFO]++;
                         break;
                 }
+                
                 fs.appendFileSync(global.selfESR.reportFile, '{\n\t\t"line" : ' + message.line + ',\n\t\t' +
-                    '"message" : "' + message.message.replace(/["']/g, '\'') + '",\n\t\t' +
+                    '"message" : "' + message.message.replace(/["']/g, '\'').replace(/[+]/g, '').replace(/[\\]/g, '\\\\').replace(/\s\s+/g, ' ') + '",\n\t\t' +
                     '"description" : "",\n\t\t' +
                     '"rulekey" : "' + message.ruleId + '",\n\t\t' +
                     '"severity" : "' + severity + '",\n\t\t' +
